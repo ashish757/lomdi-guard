@@ -30,7 +30,6 @@ import com.lomdi.dsih.LomdiAccessibilityService
 import com.lomdi.dsih.data.model.ThreatLevel
 import com.lomdi.dsih.data.source.*
 import com.lomdi.dsih.domain.usecase.RiskManager
-import com.lomdi.dsih.ui.common.ActiveStatusOverlayController
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -47,7 +46,6 @@ fun DashboardScreen(
     onNavigateToCallSecurity: () -> Unit,
     onNavigateToDeviceIntegrity: () -> Unit
 ) {
-    val context = LocalContext.current
     val isRiskCritical = RiskManager.isSystemAtCriticalRisk()
 
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
@@ -162,7 +160,6 @@ fun DashboardScreen(
                             isError = DeviceSecurityStore.isDeviceRooted,
                             onClick = onNavigateToDeviceIntegrity
                         )
-                        DiagnosticTestingBox()
                     }
                 }
             }
@@ -289,39 +286,6 @@ fun SecurityModuleCard(title: String, status: String, isError: Boolean, onClick:
                     style = MaterialTheme.typography.labelSmall,
                     color = if (isError) Color.White else Color(0xFF2E7D32),
                     fontWeight = FontWeight.Bold
-                )
-            }
-        }
-    }
-}
-
-@Composable
-fun DiagnosticTestingBox() {
-    val context = LocalContext.current
-    var badgeVisible by remember { mutableStateOf(ActiveStatusOverlayController.isVisible()) }
-    
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.3f))
-    ) {
-        Column(modifier = Modifier.padding(12.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Column {
-                    Text("Test Overlay Badge", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold)
-                    Text("Diagnostic Tool: verify rendering", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.7f))
-                }
-                Switch(
-                    checked = badgeVisible,
-                    onCheckedChange = { 
-                        badgeVisible = it
-                        if (it) ActiveStatusOverlayController.show(context)
-                        else ActiveStatusOverlayController.hide()
-                    },
-                    modifier = Modifier.scale(0.8f)
                 )
             }
         }
