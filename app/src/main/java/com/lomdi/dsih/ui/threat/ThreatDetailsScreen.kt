@@ -85,7 +85,7 @@ fun ThreatDetailsScreen(
             Spacer(modifier = Modifier.height(8.dp))
             
             Text(
-                text = "Lomdi Guard halted a suspicious transaction attempt. Severity Coefficient: $totalCoefficient%",
+                text = "Fox Guard halted a suspicious transaction attempt. Severity Coefficient: $totalCoefficient%",
                 style = MaterialTheme.typography.bodyMedium,
                 textAlign = TextAlign.Center
             )

@@ -44,7 +44,7 @@ fun CallSecurityDetailsScreen(onBack: () -> Unit) {
             
             CallInfoCard(
                 title = "Vishing Protection",
-                description = "Fraudsters often stay on a live call while instructing victims to perform UPI transactions. Lomdi monitors both standard (PSTN) and VoIP (WhatsApp/Telegram) calls to detect when you are communicating with an unsaved number during a payment session."
+                description = "Fraudsters often stay on a live call while instructing victims to perform UPI transactions. Fox monitors both standard (PSTN) and VoIP (WhatsApp/Telegram) calls to detect when you are communicating with an unsaved number during a payment session."
             )
             
             if (isCallActive && isUnsaved) {

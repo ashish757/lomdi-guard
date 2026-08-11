@@ -1,6 +1,6 @@
 # Threat Analysis Approach: Hybrid Rule-Based + Edge AI
 
-Project Lomdi utilizes a multi-layered detection strategy to identify and mitigate UPI fraud via SMS and Clipboard monitoring. The analysis follows a deterministic decision tree before invoking localized Edge AI models for semantic validation.
+Project Fox utilizes a multi-layered detection strategy to identify and mitigate UPI fraud via SMS and Clipboard monitoring. The analysis follows a deterministic decision tree before invoking localized Edge AI models for semantic validation.
 
 ## 1. Decision Tree Architecture
 
@@ -27,7 +27,7 @@ The system processes every incoming message through a tiered evaluation pipeline
 
 ## 2. Clipboard Sanitization (UPI vs. Email)
 
-To prevent false positives, Lomdi applies strict TLD-based filtering for clipboard monitoring:
+To prevent false positives, Fox applies strict TLD-based filtering for clipboard monitoring:
 *   **Email Filtering:** Disqualifies strings that match standard email patterns (containing `.com`, `.in`, `.org`, etc., after the `@`).
 *   **UPI Verification:** Only captures handles that maintain a clean alphanumeric domain after the `@` (e.g., `user@okaxis`), ensuring only payment-related data triggers risk evaluation.
 
@@ -35,7 +35,7 @@ To prevent false positives, Lomdi applies strict TLD-based filtering for clipboa
 
 ## 3. Hybrid Analysis Engine
 
-Lomdi combines the speed of local rules with the intelligence of on-device NLP:
+Fox combines the speed of local rules with the intelligence of on-device NLP:
 
 1.  **Rule-Based Engine:** Uses high-speed regex and keyword matching to handle standard transactional traffic.
 2.  **Edge AI NLP (ML Kit / TFLite):** Triggered for "Uncertain" or "High-Risk Payload" messages to evaluate if the "Urgency" is a scam pattern.

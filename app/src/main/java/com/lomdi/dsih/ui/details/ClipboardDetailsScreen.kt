@@ -57,7 +57,7 @@ fun ClipboardDetailsScreen(
                     )
                 }
                 Text(
-                    text = "Scammers often trick victims into copying fraudulent UPI IDs or phishing URLs to force payments. Lomdi intercepts this data in real-time to alert you of potential risks.",
+                    text = "Scammers often trick victims into copying fraudulent UPI IDs or phishing URLs to force payments. Fox intercepts this data in real-time to alert you of potential risks.",
                     modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp),
                     style = MaterialTheme.typography.bodyMedium
                 )

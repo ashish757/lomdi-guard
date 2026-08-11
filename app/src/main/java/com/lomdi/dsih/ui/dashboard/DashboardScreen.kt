@@ -62,7 +62,7 @@ fun DashboardScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Anti Lomdi Security Hub", fontWeight = FontWeight.Bold) }
+                title = { Text("Anti Fox Security Hub", fontWeight = FontWeight.Bold) }
             )
         }
     ) { padding ->
@@ -214,7 +214,7 @@ fun HeroHeader(isCritical: Boolean, onClick: () -> Unit) {
                         color = Color.White
                     )
                     Text(
-                        text = if (isCritical) "Your device is currently at risk" else "Lomdi Shield is actively protecting you",
+                        text = if (isCritical) "Your device is currently at risk" else "Fox Shield is actively protecting you",
                         style = MaterialTheme.typography.bodySmall,
                         color = Color.White.copy(alpha = 0.8f)
                     )

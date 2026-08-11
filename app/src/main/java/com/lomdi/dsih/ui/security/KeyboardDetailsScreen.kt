@@ -43,7 +43,7 @@ fun KeyboardDetailsScreen(onBack: () -> Unit) {
             
             KeyboardInfoCard(
                 title = "Keylogger Protection",
-                description = "Your keyboard has access to every character you type, including passwords and UPI PINs. Lomdi ensures you are using a trusted system keyboard (like Gboard or Samsung Keyboard) to prevent your keystrokes from being exfiltrated to malicious servers."
+                description = "Your keyboard has access to every character you type, including passwords and UPI PINs. Fox ensures you are using a trusted system keyboard (like Gboard or Samsung Keyboard) to prevent your keystrokes from being exfiltrated to malicious servers."
             )
             
             if (isUntrusted) {

@@ -42,7 +42,7 @@ fun DeviceIntegrityDetailsScreen(onBack: () -> Unit) {
             
             IntegrityInfoCard(
                 title = "Root & Jailbreak Risk",
-                description = "A rooted device bypasses Android's core security sandbox. This allows malware to read data from other apps, intercept PINs, and hide from standard antivirus tools. Lomdi recommends against using rooted devices for financial transactions."
+                description = "A rooted device bypasses Android's core security sandbox. This allows malware to read data from other apps, intercept PINs, and hide from standard antivirus tools. Fox recommends against using rooted devices for financial transactions."
             )
             
             if (isRooted) {

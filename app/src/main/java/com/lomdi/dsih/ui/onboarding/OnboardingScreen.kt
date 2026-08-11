@@ -95,13 +95,13 @@ fun OnboardingScreen(
             ) { page ->
                 when (page) {
                     0 -> OnboardingPage(
-                        title = "Welcome to Lomdi",
+                        title = "Welcome to Fox",
                         description = "Our mission is to stop UPI fraud before it happens, protecting your hard-earned money in real-time.",
                         icon = Icons.Default.Shield
                     )
                     1 -> OnboardingPage(
                         title = "The Shield",
-                        description = "Lomdi requires core permissions to monitor for scammers and malicious SMS content.",
+                        description = "Fox requires core permissions to monitor for scammers and malicious SMS content.",
                         icon = Icons.Default.Security,
                         action = {
                             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -143,7 +143,7 @@ fun OnboardingScreen(
                                     modifier = Modifier.fillMaxWidth(),
                                     onClick = { context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)) }
                                 ) {
-                                    Text("Enable Lomdi Guard")
+                                    Text("Enable Fox Guard")
                                 }
                             }
                         }

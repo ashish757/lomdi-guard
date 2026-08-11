@@ -59,7 +59,7 @@ fun RemoteAppsDetailsScreen(
                     )
                 }
                 Text(
-                    text = "Scammers use remote access tools (vishing) to take control of your device and perform unauthorized UPI transactions. Lomdi monitors for these apps to prevent financial theft.",
+                    text = "Scammers use remote access tools (vishing) to take control of your device and perform unauthorized UPI transactions. Fox monitors for these apps to prevent financial theft.",
                     modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp),
                     style = MaterialTheme.typography.bodyMedium
                 )

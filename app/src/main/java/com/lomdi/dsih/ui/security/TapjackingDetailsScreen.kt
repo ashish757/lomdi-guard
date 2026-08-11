@@ -45,7 +45,7 @@ fun TapjackingDetailsScreen(onBack: () -> Unit) {
             item {
                 TapjackingInfoCard(
                     title = "Tapjacking Defense",
-                    description = "Apps with 'Draw over other apps' permissions can create invisible overlays or fake UI elements. This allows them to trick you into clicking 'Pay' or 'Approve' without your knowledge. Lomdi identifies all non-system apps with this capability."
+                    description = "Apps with 'Draw over other apps' permissions can create invisible overlays or fake UI elements. This allows them to trick you into clicking 'Pay' or 'Approve' without your knowledge. Fox identifies all non-system apps with this capability."
                 )
             }
             if (overlayApps.isNotEmpty()) {

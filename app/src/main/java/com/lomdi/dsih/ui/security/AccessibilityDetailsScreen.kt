@@ -45,7 +45,7 @@ fun AccessibilityDetailsScreen(onBack: () -> Unit) {
             item {
                 SecurityInfoCard(
                     title = "Why this matters",
-                    description = "Accessibility services can read your screen, intercept OTPs, and capture UPI PINs. Banking trojans often abuse this permission to steal funds. Lomdi audits all active services to ensure only trusted system apps are running."
+                    description = "Accessibility services can read your screen, intercept OTPs, and capture UPI PINs. Banking trojans often abuse this permission to steal funds. Fox audits all active services to ensure only trusted system apps are running."
                 )
             }
             if (trojans.isNotEmpty()) {
